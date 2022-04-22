@@ -1,13 +1,14 @@
-const express = require('express')
-const app = express()
+var http = require("http");
 
-const port = process.env.PORT || 3000;
+http.createServer(function (request, response) {
+   // Send the HTTP header 
+   // HTTP Status: 200 : OK
+   // Content Type: text/plain
+   response.writeHead(200, {'Content-Type': 'text/plain'});
+   
+   // Send the response body as "Hello World"
+   response.end('Hello World\n');
+}).listen(8081);
 
-app.get('/', (req, res) => res.send('Hello World! Onexlab'))
-
-app.listen(port, (err) => {
-    if (err) {
-      console.log('Error::', err);
-    }
-    console.log(`Onexlab app listening on port ${port}`);
-});
+// Console will print the message
+console.log('Server running at http://127.0.0.1:3000/');
