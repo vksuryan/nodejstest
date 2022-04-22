@@ -1,11 +1,17 @@
 {
-  "name": "helloworld",
+  "name": "firstnodejsapp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "how to create hello world web application in nodejs",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+  ],
+  "author": "Harsukh Makwana",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
 }
