@@ -1,14 +1,19 @@
-var http = require("http");
+// Importing http core package/module provided by nodejs
 
-http.createServer(function (request, response) {
-   // Send the HTTP header 
-   // HTTP Status: 200 : OK
-   // Content Type: text/plain
-   response.writeHead(200, {'Content-Type': 'text/plain'});
-   
-   // Send the response body as "Hello World"
-   response.end('Hello World\n');
-}).listen(8081);
+var http = require('http');
 
-// Console will print the message
-console.log('Server running at http://127.0.0.1:3000/');
+// Creating a server
+
+http.createServer(function (req, res) {
+
+// Write response as Html(text)
+
+res.writeHead(200, {'Content-Type': 'text/html'});
+
+// Writing static text
+
+res.end('Hello World');
+
+// Server listening on port number 3000
+
+}).listen(3000);
