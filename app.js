@@ -1,19 +1,8 @@
-// Importing http core package/module provided by nodejs
-
 var http = require('http');
 
-// Creating a server
-
-http.createServer(function (req, res) {
-
-// Write response as Html(text)
-
-res.writeHead(200, {'Content-Type': 'text/html'});
-
-// Writing static text
-
-res.end('Hello World');
-
-// Server listening on port number 3000
-
-}).listen(3000);
+var server = http.createServer(function(request response) {
+resquest.writeHead(200,{'Content-Type': 'text/plain'});
+response.end('NodeJS App');
+});
+server.listen(3000);
+console.log('Server is running at http://localhost:3000/');
